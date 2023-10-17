@@ -1,0 +1,501 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body .contact-modal {
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+body .contact-modal .hide-modal {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  transition: 0.5S ease-out;
+}
+body .contact-modal .show-modal {
+  position: absolute;
+  width: 70%;
+  height: 80vh;
+  background-color: #fff;
+  display: block;
+  transition: 0.5s ease-out;
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  justify-content: space-between;
+  max-width: 700px;
+  gap: 30px;
+}
+body .contact-modal .show-modal .head {
+  display: flex;
+  justify-content: space-between;
+}
+body .contact-modal .show-modal .head .x {
+  font-size: 30px;
+  cursor: pointer;
+}
+body .contact-modal .show-modal .head .x:hover {
+  color: red;
+}
+body .contact-modal .show-modal .message {
+  flex: 1;
+}
+body .contact-modal .show-modal label {
+  display: flex;
+  flex-direction: column;
+}
+body .contact-modal .show-modal label .label {
+  opacity: 0.6;
+}
+body .contact-modal .show-modal label input, body .contact-modal .show-modal label textarea {
+  outline: #8024FB;
+  flex: 1;
+  padding: 10px 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body .contact-modal .show-modal label textarea {
+  max-height: 1000px;
+}
+body .contact-modal .show-modal .contacter {
+  padding: 15px;
+  background-color: #8024FB;
+  color: #fff;
+  text-align: center;
+  font-size: 25px;
+  cursor: default;
+}
+body .accueil {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-image: url(image/font1.png);
+  background-size: 100% 100%;
+}
+body .accueil header {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 120px;
+  display: flex;
+  align-items: center;
+  opacity: 0.8;
+}
+body .accueil header .logo {
+  background-image: url(image/logo.svg);
+  background-size: 100%;
+  height: 60px;
+  width: 60px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+body .accueil header ul {
+  display: flex;
+  gap: 3vw;
+}
+body .accueil header ul li {
+  list-style-type: none;
+  font-size: 15px;
+}
+body .accueil header .btn {
+  background-color: #8024FB;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 18px;
+}
+body .accueil .container {
+  display: flex;
+  flex: 1;
+  padding: 0 0 0 120px;
+}
+body .accueil .container .info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3.5vh;
+}
+body .accueil .container .info .info1 {
+  color: #8024FB;
+  font-size: 25px;
+}
+body .accueil .container .info .info2 {
+  font-weight: bold;
+  font-size: 45px;
+}
+body .accueil .container .info .info3 {
+  font-size: 25px;
+  opacity: 0.8;
+}
+body .accueil .container .info .info4 {
+  opacity: 0.5;
+}
+body .accueil .container .info .info5 {
+  background-color: #8024FB;
+  padding: 5px 20px;
+  align-self: flex-start;
+  font-size: 20px;
+  color: white;
+}
+body .accueil .container .image {
+  flex: 1;
+  background-image: url(image/pdp\ d.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
+body .my-info {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 0 120px;
+  background-image: url(image/test/font26.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  padding-top: 70px;
+}
+body .my-info .head {
+  flex: 2;
+  padding: 2% 0;
+}
+body .my-info .head .who-am-i,
+body .my-info .head .maybe,
+body .my-info .head .charactere {
+  text-align: center;
+}
+body .my-info .head .who-am-i {
+  color: #8024FB;
+  font-size: 20px;
+  font-weight: bold;
+}
+body .my-info .head .maybe {
+  padding: 20px;
+  opacity: 0.85;
+}
+body .my-info .head .charactere {
+  font-size: 15px;
+  opacity: 0.6;
+}
+body .my-info .info {
+  flex: 8;
+  display: flex;
+  flex-direction: row;
+}
+body .my-info .info .img {
+  flex: 1;
+  background-color: red;
+  background-image: url(image/res.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+body .my-info .info .presentation {
+  display: flex;
+  flex-direction: column;
+  flex: 1.1;
+  justify-content: center;
+  gap: 20px;
+}
+body .my-info .info .presentation .texte {
+  font-size: 17px;
+  opacity: 0.6;
+}
+body .services {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 0 120px;
+  gap: 50px;
+}
+body .services .head .service,
+body .services .head .title,
+body .services .head .texte {
+  text-align: center;
+}
+body .services .head .service {
+  color: #8024FB;
+  font-size: 18px;
+  font-weight: bold;
+}
+body .services .head .title {
+  padding: 15px 0;
+  opacity: 0.85;
+}
+body .services .head .texte {
+  opacity: 0.6;
+}
+body .services .infos {
+  flex: 8;
+  display: flex;
+  flex-direction: row;
+  padding: 50px 0;
+  gap: 5%;
+}
+body .services .infos .service {
+  width: 20px;
+  border: 1px solid rgb(207, 205, 205);
+  border-radius: 20px;
+  flex: 1;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  padding: 35px 10px 10px 10px;
+}
+body .services .infos .service .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+body .services .infos .service .container .img {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 70px;
+  height: 70px;
+}
+body .services .infos .service .container .img1 {
+  background-image: url(image/web.svg);
+}
+body .services .infos .service .container .img2 {
+  background-image: url(image/desktop.svg);
+}
+body .services .infos .service .container .img3 {
+  background-image: url(image/android.svg);
+}
+body .services .infos .service .container .title {
+  text-align: center;
+  opacity: 0.85;
+}
+body .services .infos .service .container .texte {
+  text-align: center;
+  opacity: 0.4;
+}
+body .services .infos .service .techno {
+  font-size: 13px;
+}
+body .services .infos .service .techno .value {
+  font-size: 12px;
+  opacity: 0.6;
+}
+body .projects {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 120px;
+  gap: 40px;
+}
+body .projects .head {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+body .projects .head .title {
+  opacity: 0.9;
+  text-align: center;
+}
+body .projects .head .text {
+  text-align: center;
+  opacity: 0.6;
+}
+body .projects .content {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  flex: 1;
+  flex-wrap: wrap;
+}
+body .projects .content .project {
+  border: 1px solid black;
+  min-width: 500px;
+  flex: 1;
+}
+body .technologies {
+  padding: 20px 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+body .technologies .head {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+body .technologies .head .tec {
+  text-align: center;
+  color: #8024FB;
+  font-weight: bold;
+}
+body .technologies .head .title {
+  text-align: center;
+  opacity: 0.85;
+}
+body .technologies .head .text {
+  text-align: center;
+  opacity: 0.6;
+}
+body .technologies .content {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-content: flex-start;
+  justify-content: center;
+}
+body .technologies .content .techno {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 10px;
+  background-color: #F5F5F5;
+  padding: 10px;
+  align-items: center;
+  position: relative;
+  max-width: 200px;
+}
+body .technologies .content .techno .image {
+  width: 70%;
+  height: 70px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+body .technologies .content .techno .html {
+  background-image: url(image/html.svg);
+}
+body .technologies .content .techno .ts {
+  background-image: url(image/ts.svg);
+}
+body .technologies .content .techno .js {
+  -o-border-image: url(image/js.svg);
+     border-image: url(image/js.svg);
+}
+body .technologies .content .techno .node {
+  background-image: url(image/node.svg);
+}
+body .technologies .content .techno .next {
+  background-image: url(image/next.png);
+}
+body .technologies .content .techno .xd {
+  background-image: url(image/xd.svg);
+}
+body .technologies .content .techno .ps {
+  background-image: url(image/ps.svg);
+}
+body .technologies .content .techno .vue {
+  background-image: url(image/vue.svg);
+}
+body .technologies .content .techno .native {
+  background-image: url(image/react.svg);
+}
+body .technologies .content .techno .react {
+  background-image: url(image/react.svg);
+}
+body .technologies .content .techno .description {
+  opacity: 0.6;
+}
+body .technologies .content .techno .experience {
+  padding: 5px 0;
+  border-radius: 5px;
+  background-color: #8024FB;
+  color: white;
+  width: 100%;
+  text-align: center;
+}
+body .before-foot {
+  background-color: #bbbabd;
+  text-align: center;
+  padding: 5px;
+  font-size: 10px;
+}
+body footer {
+  background-color: #271441;
+  color: white;
+  padding: 10px 80px;
+  display: flex;
+  flex-direction: column;
+}
+body footer .information {
+  background-color: #271441;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+body footer .information .block {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+body footer .information .block .head {
+  font-size: 20px;
+}
+body footer .information .block .details {
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+body footer .contact {
+  border-top: 1px solid white;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+body footer .contact .network {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+body footer .contact .network .follow {
+  font-size: 14px;
+}
+body footer .contact .network .sociaux {
+  display: flex;
+  gap: 10px;
+}
+body footer .contact .network .sociaux .img {
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body footer .contact .network .sociaux .facebook {
+  background-image: url(image/fb.svg);
+}
+body footer .contact .network .sociaux .linkedIn {
+  background-image: url(image/linkedin.svg);
+}
+body footer .contact .network .sociaux .google {
+  background-image: url(image/google.svg);
+}
+body footer .contact .network .sociaux .skype {
+  background-image: url(image/skype.svg);
+}
+body footer .contact .btn-contact {
+  font-size: 20px;
+  padding: 10px 50px;
+  background-color: #FF5353;
+  border-radius: 5px;
+  align-self: center;
+  cursor: pointer;
+}
+body footer .end {
+  text-align: center;
+  font-size: 13px;
+}/*# sourceMappingURL=style.css.map */

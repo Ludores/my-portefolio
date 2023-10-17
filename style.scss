@@ -1,0 +1,612 @@
+$theme: #8024FB;
+$black: #000;
+$white: #fff;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+
+    .contact-modal {
+        backdrop-filter: blur(2px);
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, .2);
+        z-index: 10;
+        display: none;
+        align-items: center;
+        justify-content: center;
+
+        .hide-modal {
+            position: absolute;
+            width: 0;
+            height: 0;
+            opacity: 0;
+            transition: .5S ease-out;
+        }
+
+        .show-modal {
+            position: absolute;
+            width: 70%;
+            height: 80vh;
+            background-color: $white;
+            display: block;
+            transition: .5s ease-out;
+            opacity: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            justify-content: space-between;
+            max-width: 700px;
+            gap: 30px;
+            
+            .head{
+                display: flex;
+                justify-content: space-between;
+                .title{
+                    
+                }
+                .x{
+                    font-size: 30px;
+                    cursor: pointer;
+                    &:hover{
+                        color: red;
+                    }
+                }
+            }
+            .name, .mail{
+                // flex: 1;
+            }
+            .message{
+                flex: 1;
+            }
+            label{
+                display: flex;
+                flex-direction: column;
+                .label{
+                    opacity: .6;
+                }
+
+                input, textarea{
+                    outline: $theme;
+                    flex: 1;
+                    padding: 10px 10px;
+                    font-family: Arial, Helvetica, sans-serif;
+                }
+
+                textarea{
+                    max-height: 1000px;
+                }
+            }
+            .contacter{
+                padding: 15px;
+                background-color: $theme;
+                color: $white;
+                text-align: center;
+                font-size: 25px;
+                cursor:default;
+            }
+        }
+
+    }
+
+    .accueil {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        background-image: url(image/font1.png);
+        background-size: 100% 100%;
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 120px;
+            display: flex;
+            align-items: center;
+            opacity: .8;
+
+            .logo {
+                background-image: url(image/logo.svg);
+                background-size: 100%;
+                height: 60px;
+                width: 60px;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+
+            ul {
+                display: flex;
+                gap: 3vw;
+
+                li {
+                    list-style-type: none;
+                    font-size: 15px;
+                }
+            }
+
+            .btn {
+                background-color: $theme;
+                color: white;
+                padding: 5px 10px;
+                border-radius: 5px;
+                font-size: 18px;
+            }
+        }
+
+        .container {
+            display: flex;
+            flex: 1;
+            padding: 0 0 0 120px;
+
+            .info {
+                // background-color: green;
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 3.5vh;
+
+                .info1 {
+                    color: $theme;
+                    font-size: 25px;
+                }
+
+                .info2 {
+                    font-weight: bold;
+                    font-size: 45px;
+                }
+
+                .info3 {
+                    font-size: 25px;
+                    opacity: .8;
+                }
+
+                .info4 {
+                    opacity: .5;
+                }
+
+                .info5 {
+                    background-color: $theme;
+                    padding: 5px 20px;
+                    align-self: flex-start;
+                    font-size: 20px;
+                    color: white;
+                }
+            }
+
+            .image {
+                flex: 1;
+                background-image: url(image/pdp\ d.png);
+                // background-image: url(image/pic_acc.svg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: bottom right;
+            }
+        }
+    }
+
+    .my-info {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        padding: 0 120px;
+        background-image: url(image/test/font26.jpg);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        padding-top: 70px;
+
+        .head {
+            flex: 2;
+            padding: 2% 0;
+
+            .who-am-i,
+            .maybe,
+            .charactere {
+                text-align: center;
+            }
+
+            .who-am-i {
+                color: $theme;
+                font-size: 20px;
+                font-weight: bold;
+            }
+
+            .maybe {
+                padding: 20px;
+                opacity: .85;
+            }
+
+            .charactere {
+                font-size: 15px;
+                opacity: .6;
+            }
+        }
+
+        .info {
+            flex: 8;
+            display: flex;
+            flex-direction: row;
+            // background-color: aqua;
+
+            .img {
+                flex: 1;
+                background-color: red;
+                background-image: url(image/res.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+            }
+
+            .presentation {
+                display: flex;
+                flex-direction: column;
+                flex: 1.1;
+                justify-content: center;
+                gap: 20px;
+
+                .title {}
+
+                .texte {
+                    font-size: 17px;
+                    opacity: .6;
+                }
+            }
+        }
+    }
+
+    .services {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        padding: 0 120px;
+        gap: 50px;
+
+        .head {
+
+            .service,
+            .title,
+            .texte {
+                text-align: center;
+            }
+
+            .service {
+                color: $theme;
+                font-size: 18px;
+                font-weight: bold;
+            }
+
+            .title {
+                padding: 15px 0;
+                opacity: .85;
+            }
+
+            .texte {
+                opacity: .6;
+            }
+
+        }
+
+        .infos {
+            flex: 8;
+            display: flex;
+            flex-direction: row;
+            padding: 50px 0;
+            gap: 5%;
+
+            .service {
+                width: 20px;
+                border: 1px solid rgb(207, 205, 205);
+                border-radius: 20px;
+                flex: 1;
+                justify-content: space-between;
+                display: flex;
+                flex-direction: column;
+                padding: 35px 10px 10px 10px;
+
+                .container {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 20px;
+
+                    .img {
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        background-position: center;
+                        width: 70px;
+                        height: 70px;
+                    }
+
+                    .img1 {
+                        background-image: url(image/web.svg);
+                    }
+
+                    .img2 {
+                        background-image: url(image/desktop.svg);
+                    }
+
+                    .img3 {
+                        background-image: url(image/android.svg);
+                    }
+
+                    .title {
+                        text-align: center;
+                        opacity: .85;
+                    }
+
+                    .texte {
+                        text-align: center;
+                        opacity: .4;
+                    }
+
+                }
+
+                .techno {
+                    font-size: 13px;
+
+                    .value {
+                        font-size: 12px;
+                        opacity: .6;
+                    }
+                }
+            }
+        }
+    }
+
+    .projects {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        padding: 30px 120px;
+        gap: 40px;
+
+        .head {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .title {
+                opacity: .9;
+                text-align: center;
+            }
+
+            .text {
+                text-align: center;
+                opacity: .6;
+            }
+        }
+
+        .content {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            flex: 1;
+            flex-wrap: wrap;
+
+            .project {
+                border: 1px solid black;
+                min-width: 500px;
+                flex: 1;
+            }
+        }
+    }
+
+    .technologies {
+        // height: 100vh;
+        padding: 20px 120px;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+
+        .head {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            .tec {
+                text-align: center;
+                color: $theme;
+                font-weight: bold;
+            }
+
+            .title {
+                text-align: center;
+                opacity: .85;
+            }
+
+            .text {
+                text-align: center;
+                opacity: .6;
+            }
+        }
+
+        .content {
+            display: flex;
+            flex: 1;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-content: flex-start;
+            justify-content: center;
+
+            .techno {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                border-radius: 10px;
+                background-color: #F5F5F5;
+                padding: 10px;
+                align-items: center;
+                position: relative;
+                max-width: 200px;
+
+                .image {
+                    width: 70%;
+                    height: 70px;
+                    background-repeat: no-repeat;
+                    background-size: 100% 100%;
+                }
+
+                .html {
+                    background-image: url(image/html.svg);
+                }
+
+                .ts {
+                    background-image: url(image/ts.svg);
+                }
+
+                .js {
+                    border-image: url(image/js.svg);
+                }
+
+                .node {
+                    background-image: url(image/node.svg);
+                }
+
+                .next {
+                    background-image: url(image/next.png);
+                }
+
+                .xd {
+                    background-image: url(image/xd.svg);
+                }
+
+                .ps {
+                    background-image: url(image/ps.svg);
+                }
+
+                .vue {
+                    background-image: url(image/vue.svg);
+                }
+
+                .native {
+                    background-image: url(image/react.svg);
+                }
+
+                .react {
+                    background-image: url(image/react.svg);
+                }
+
+                .description {
+                    opacity: .6;
+                }
+
+                .experience {
+                    padding: 5px 0;
+                    border-radius: 5px;
+                    background-color: $theme;
+                    color: white;
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    .before-foot {
+        background-color: #bbbabd;
+        text-align: center;
+        padding: 5px;
+        font-size: 10px;
+    }
+
+    footer {
+        background-color: #271441;
+        color: white;
+        padding: 10px 80px;
+        display: flex;
+        flex-direction: column;
+
+        // gap: 50px;
+        .information {
+            background-color: #271441;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+
+            .block {
+                display: flex;
+                flex-direction: column;
+                gap: 50px;
+
+                .head {
+                    font-size: 20px;
+                }
+
+                .details {
+
+                    font-size: 15px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                }
+            }
+        }
+
+        .contact {
+            border-top: 1px solid white;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+
+            .network {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+
+                .follow {
+                    font-size: 14px;
+                }
+
+                .sociaux {
+                    display: flex;
+                    gap: 10px;
+
+                    .img {
+                        width: 40px;
+                        height: 40px;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                    }
+
+                    .facebook {
+                        background-image: url(image/fb.svg);
+                    }
+
+                    .linkedIn {
+                        background-image: url(image/linkedin.svg);
+                    }
+
+                    .google {
+                        background-image: url(image/google.svg);
+                    }
+
+                    .skype {
+                        background-image: url(image/skype.svg);
+                    }
+                }
+            }
+
+            .btn-contact {
+                font-size: 20px;
+                padding: 10px 50px;
+                background-color: #FF5353;
+                border-radius: 5px;
+                align-self: center;
+                cursor: pointer;
+            }
+        }
+
+        .end {
+            text-align: center;
+            font-size: 13px;
+        }
+    }
+}
