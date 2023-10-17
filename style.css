@@ -90,6 +90,7 @@ body .accueil {
   background-size: 100% 100%;
 }
 body .accueil header {
+  background-color: red;
   display: flex;
   justify-content: space-between;
   padding: 5px 120px;
